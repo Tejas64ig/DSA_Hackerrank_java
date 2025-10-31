@@ -12,30 +12,30 @@ public class LeftRotation {
             arr[i] = sc.nextInt();
         }
 
-        int[] rotated = rotateLeft(d, arr);
+        int[] r = rotateLeft(d, arr);
 
         for (int i = 0; i < n; i++) {
-            System.out.print(rotated[i] + " ");
+            System.out.print(r[i] + " ");
         }
     }
 
     public static int[] rotateLeft(int d, int[] arr) {
         int n = arr.length;
-        d = d % n;  // handle when d > n
+        d = d % n;
 
-        int[] rotated = new int[n];
+        int[] r = new int[n];
         int index = 0;
 
-        // Add elements after d to the new array
+
         for (int i = d; i < n; i++) {
-            rotated[index++] = arr[i];
+            r[index++] = arr[i];
         }
 
-        // Add the first d elements at the end
+
         for (int i = 0; i < d; i++) {
-            rotated[index++] = arr[i];
+            r[index++] = arr[i];
         }
 
-        return rotated;
+        return r;
     }
 }
