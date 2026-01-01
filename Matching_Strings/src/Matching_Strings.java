@@ -8,12 +8,22 @@ import java.util.regex.*;
 
 class Result {
 
-
     public static List<Integer> Matching_Strings(List<String> stringList, List<String> queries) {
+        
+        List<Integer> result = new ArrayList<>();
+        for (String q : queries) {
+            int count = 0;
+            for (String s : stringList) {
+                if (s.equals(q)) {
+                    count++;
+                }
+            }
+            result.add(count);
+        }
 
-
+        return result;
+    }
 }
-
 
 public class Matching_Strings {
     public static void main(String[] args) throws IOException {
@@ -54,3 +64,4 @@ public class Matching_Strings {
         bufferedWriter.close();
     }
 }
+
