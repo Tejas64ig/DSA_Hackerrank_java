@@ -12,11 +12,12 @@ public class ARRAY_SUM {
 
             for(int i=0;i<n;i++){
                 Num[i] = s.nextInt();
-
+//...
                 sum = sum + Num[i];
             }
 
             System.out.println(sum);
         }
     }
+
 
