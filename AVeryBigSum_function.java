@@ -14,12 +14,13 @@ public class AVeryBigSum_function {
 
         for(int i=0;i<n;i++){
             Num[i] = s.nextLong();
-
+//...
             sum = sum + Num[i];
         }
-
+        
         System.out.println(sum);
     }
 }
+
 
 
